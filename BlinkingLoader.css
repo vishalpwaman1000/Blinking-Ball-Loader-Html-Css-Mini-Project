@@ -1,0 +1,67 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Loader{
+
+    height: 200px;
+    width: 200px;
+    /* border: 0.5px solid white; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Ball{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+
+    margin: 4px;
+    border-radius: 50%;
+
+    animation: Blinking 1s linear infinite;
+    
+}
+
+.Ball:nth-child(2){
+    animation-delay: 0.33s;
+}
+
+.Ball:nth-child(3){
+    animation-delay: 0.66s;
+}
+
+.LoaderText{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 30px;
+}
+
+@keyframes Blinking {
+
+    0%,100%{
+        transform: scale(0.01);
+        /* opacity: 0; */
+    }
+
+    /* 40%{
+        transform: scale(1);
+    } */
+
+    50%{
+        transform: scale(1);
+    }
+    
+}
